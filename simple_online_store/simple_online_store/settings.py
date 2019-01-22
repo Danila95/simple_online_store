@@ -51,10 +51,14 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'simple_online_store.urls'
 
+# зададим переменной имя файла в, которой будет храниться все шаблоны проекта
+TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
+
+# Параметр DIRS задает набор каталогов, которые хранят шаблоны.
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATE_DIR,],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
