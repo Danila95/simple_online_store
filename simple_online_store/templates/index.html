@@ -24,5 +24,7 @@
 {% endblock %}
 
 {% block links %}
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
 {% endblock %}
 {% block scripts %}{% endblock %}
