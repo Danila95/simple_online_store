@@ -10,3 +10,9 @@ https://www.youtube.com/watch?v=4RQ2USIaINs&list=PLSWnD6rL-m9adebgpvvOLH5ASGJizn
 `pip install django-bootstrap3`
 
 подробности здесь https://evileg.com/ru/post/6/
+
+вход в админку django
+
+user: admin
+
+password: 123
