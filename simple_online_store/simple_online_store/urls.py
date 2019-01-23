@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+#admin.autodiscover() # команда позволяет Джанго автоматически находить все файлы админки
+
 urlpatterns = [
 	path('admin/', admin.site.urls),
 	path('', include('mainApp.urls')),
