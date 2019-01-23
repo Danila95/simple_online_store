@@ -12,7 +12,11 @@
     {% load staticfiles %}
     <link rel="shortcut icon" href="{% static './favicon.ico' %}">
     <link rel="shortcut icon" href="{% static './bootstrap-4.0.0/js/bootstrap.min.js' %}">
-    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <link rel="shortcut icon" href="{% static './bootstrap-4.0.0/css/bootstrap.min.js' %}">
+    {% load bootstrap3 %}
+    <script src="{% bootstrap_jquery_url %}"></script>
+    {% bootstrap_javascript %}
+    {% bootstrap_css %}
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
