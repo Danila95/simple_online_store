@@ -14,7 +14,14 @@
             <h1 class="title">Наш магазин скоро откроется</h1>
             <h1 class="title">Отправте нам ваш email в форме ниже</h1>
             <div>
-                {{ form }}
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div>
+                        <button type="submit" class="btn btn-primary">Отправить</button>
+                    </div>
+                </form>
+
             </div>
         </div>
     </div>

@@ -5,7 +5,17 @@ from .forms import SubscriberForm
 def mainApp(request):
 	form = SubscriberForm(request.POST or None)
 
-	return render(request, 'index.html', locals())
+	if request.method == "POST":
+		print(form)
+		print(request.POST)
+		data = form.cleaned_data
 
-# def index(request):
-# 	return render(request, 'index.html')
+		print(form.cleaned_data)
+		print('#####################')
+		print(form.cleaned_data['name'])
+		print(data['name'])
+
+		# сохранить форму в БД
+		new_form = form.save()
+
+	return render(request, 'index.html', locals())
