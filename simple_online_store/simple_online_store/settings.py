@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 	'bootstrap3',
 
-	'mainApp'
+	'mainApp',
+    'orders',
+	'products'
 ]
 
 MIDDLEWARE = [
@@ -130,3 +132,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
+# зададим путь в media, чтобы там сохранялись картинки
+MEDIA_ROOT = os.path.join(BASE_DIR, "static", "media")
