@@ -130,8 +130,12 @@ STATIC_URL = '/static/'
 
 # зададим путь в глобальную директорию, в которой будет лежать все статические файлы проекта
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+  os.path.join(BASE_DIR, "static", "static_dev"),
 ]
 
+STATIC_ROOT = os.path.join(BASE_DIR, "static", "static_prod")
+
 # зададим путь в media, чтобы там сохранялись картинки
+MEDIA_URL = '/media/'
+
 MEDIA_ROOT = os.path.join(BASE_DIR, "static", "media")

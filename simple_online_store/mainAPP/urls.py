@@ -2,5 +2,6 @@ from django.urls import include, path
 from . import views
 
 urlpatterns = [
-	path('', views.mainApp, name='index'),
+	path('', views.home, name='home'),
+	path('landing/', views.mainApp, name='index'),
 ]

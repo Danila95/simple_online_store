@@ -1,0 +1,44 @@
+{% extends "template.html" %}
+{# block head#}
+{% block title %}Главная страница{% endblock %}
+
+{#block body#}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+    <div class="general-container">
+        <div class="container top-container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h1 class="title">Наш магазин скоро откроется!<br>
+                    Оставляйте Ваш имейл в форме ниже</h1>
+                    <div>
+                        <form action="" method="post" class="form-inline text-center">{% csrf_token %}
+                         <div class="form-group">
+                             <label>Ваш имейл: </label>
+                             <input name="{{ form.email.name }}" class="form-control">
+                         </div>
+                         <div class="form-group">
+                             <label>Ваше имя: </label>
+                             <input name="{{ form.name.name }}" class="form-control">
+                         </div>
+                         <button type="submit" class="btn btn-primary btn-orange">Отправить</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+
+{% block links %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static './css/landing.css' %}">
+{% endblock %}
+{% block scripts %}{% endblock %}

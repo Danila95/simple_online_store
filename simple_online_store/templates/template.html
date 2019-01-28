@@ -18,15 +18,14 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-{% block header %}
-{% endblock %}
+    <div class="wrapper">
+        {% include 'includes/navbar.html'%}
 
-{% block content %}
-{% endblock %}
+        {% block content %}
+        {% endblock %}
 
-{% block footer %}
-{% endblock %}
-
+        {% include 'includes/footer.html'%}
+    </div>
 </body>
     {# includs links and scripts #}
     {% block links %}{% endblock %}
