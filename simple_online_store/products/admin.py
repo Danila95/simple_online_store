@@ -14,7 +14,7 @@ class ProductAdmin (admin.ModelAdmin):
 	class Meta:
 		model = Product
 
-# регистрируем модель Product, которую мы импорттировали из models.py и рег. класс ProductAdmin
+# регистрируем модель Product, которую мы импортировали из models.py и рег. класс ProductAdmin
 admin.site.register(Product, ProductAdmin)
 
 
@@ -26,7 +26,7 @@ class ProductImageAdmin(admin.ModelAdmin):
 		model = ProductImage
 
 
-# регистрируем модель ProductImage, которую мы импорттировали из models.py и рег. класс ProductImageAdmin
+# регистрируем модель ProductImage, которую мы импортировали из models.py и рег. класс ProductImageAdmin
 admin.site.register(ProductImage, ProductImageAdmin)
 
 
@@ -38,5 +38,18 @@ class СurrencyAdmin(admin.ModelAdmin):
 		model = Сurrency
 
 
-# регистрируем модель Сurrency, которую мы импорттировали из models.py и рег. класс СurrencyAdmin
+# регистрируем модель Сurrency, которую мы импортировали из models.py и рег. класс СurrencyAdmin
 admin.site.register(Сurrency, СurrencyAdmin)
+
+
+
+class ProductCategoryAdmin(admin.ModelAdmin):
+	# выведем поля таблицы из моделе Сurrency в админке
+	list_display = [field.name for field in ProductCategory._meta.fields]
+
+	class Meta:
+		model = ProductCategory
+
+
+# регистрируем модель ProductCategory, которую мы импортировали из models.py и рег. класс ProductCategoryAdmin
+admin.site.register(ProductCategory, ProductCategoryAdmin)

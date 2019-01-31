@@ -1,7 +1,7 @@
 {% extends "template.html" %}
 {% load static %}
 {# block head#}
-{% block title %}Главная страница{% endblock %}
+{% block title %}Главная страница | e-shop.com {% endblock %}
 
 {#block body#}
 
@@ -11,41 +11,88 @@
     <div class="section-top">
         <img src="{% static './img/slider0.jpg' %}" alt="" class="img-responsive">
     </div>
-<div class="section">
-    <div class="container">
-        <div class="row">
-            {% for product_image in products_images %}
-                <div class="col-lg-3">
-                    <div class="product-item">
-                        <div>
-                            <img src="{{ product_image.image.url }}" alt="" class="img-responsive">
-                        </div>
-                        <h4>{{ product_image.product.name }}</h4>
-                        <p>
-                            {{ product_image.product.description|truncatechars_html:100 }}
-                        </p>
-                        <div class="price">
-                            {{ product_image.product.price }}&nbsp;&nbsp;{{ product_image.product.currency }}
-                        </div>
-
-                        <div class="add-to-card-btn">
-                            <button class="btn btn-success">
-                                Добавить в корзину
-                            </button>
-                        </div>
-                    </div>
-
+    <div class="section section1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">
+                        Новые поступления
+                    </h1>
                 </div>
-            {% endfor %}
+                {% for product_image in products_images %}
+                    {% include 'mainApp/product_item.html' %}
+                {% endfor %}
+            </div>
         </div>
     </div>
-</div>
+	<div class="section section-delivery">
+		<div>
+			<h3>Free shipping</h3>
+		</div>
+	</div>
+    <div class="section section2 phones-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">
+                        Телефоны
+                    </h1>
+                </div>
+                {% for product_image in products_images_phones %}
+                    {% include 'mainApp/product_item.html' %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="section section3 laptops-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">
+                        Ноутбуки
+                    </h1>
+                </div>
+                {% for product_image in products_images_laptops %}
+                    {% include 'mainApp/product_item.html' %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="section section4 headphones-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">
+                        Наушники
+                    </h1>
+                </div>
+                {% for product_image in products_images_headphones %}
+                    {% include 'mainApp/product_item.html' %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="section section5 different-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">
+                        Разное
+                    </h1>
+                </div>
+                {% for product_image in products_images_different %}
+                    {% include 'mainApp/product_item.html' %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 {% endblock %}
-
-
 
 {% block links %}
     {% load staticfiles %}
     <link rel="stylesheet" href="{% static './css/style.css' %}">
+    <link rel="stylesheet" href="{% static './css/bubbles.css' %}">
 {% endblock %}
-{% block scripts %}{% endblock %}
+{% block scripts %}
+    <script src="{% static './js/bubbles.js' %}"></script>
+{% endblock %}

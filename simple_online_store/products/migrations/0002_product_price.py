@@ -11,7 +11,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AddField(
-            model_name='product',
+            model_name='products',
             name='price',
             field=models.DecimalField(decimal_places=2, default=0, max_digits=10),
         ),

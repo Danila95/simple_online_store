@@ -19,13 +19,15 @@
 </head>
 <body>
     <div class="wrapper">
+        <div class="wrapper-content">
         {% include 'includes/navbar.html'%}
 
         {% block content %}
         {% endblock %}
-
-        {% include 'includes/footer.html'%}
+        </div>
     </div>
+
+    {% include 'includes/footer.html'%}
 </body>
     {# includs links and scripts #}
     {% block links %}{% endblock %}

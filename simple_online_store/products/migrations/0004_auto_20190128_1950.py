@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             options={'verbose_name': 'Курс', 'verbose_name_plural': 'Курсы'},
         ),
         migrations.AddField(
-            model_name='product',
+            model_name='products',
             name='short_description',
             field=models.TextField(blank=True, default=None, null=True),
         ),

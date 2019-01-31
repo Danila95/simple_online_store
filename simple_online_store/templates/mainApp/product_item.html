@@ -1,0 +1,40 @@
+<div class="col-lg-3">
+    <div class="product-item">
+        <div>
+            <a href="{% url 'product' product_image.product.id %}">
+                <img src="{{ product_image.image.url }}" alt="" class="img-responsive">
+            </a>
+        </div>
+        {% if product_image.product.discount %}
+
+            <div class="discount-container {% if product_image.product.discount >= 50 %} discount-container-hot {% endif %}">
+                {% if product_image.product.discount >= 50 %}
+                    <div class="center-outer">
+                        <div class="center-inner">
+                            <div class="bubbles">
+                                <h3>{{ product_image.product.discount }}%</h3>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <span>{{ product_image.product.discount }}%</span>
+                {% endif %}
+            </div>
+
+        {% endif %}
+        <h4>{{ product_image.product.name }}</h4>
+        <p>
+            {{ product_image.product.description|truncatechars_html:100 }}
+        </p>
+        <div class="price">
+            {{ product_image.product.price }}&nbsp;&nbsp;{{ product_image.product.currency }}
+        </div>
+
+        <div class="add-to-card-btn">
+            <button class="btn btn-success">
+                Добавить в корзину
+            </button>
+        </div>
+    </div>
+
+</div>

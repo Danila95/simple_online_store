@@ -5,6 +5,19 @@ html, body{
 	background-color: #edeef0;
 }
 
+.navbar{
+    margin-bottom: 0;
+}
+
+.wrapper{
+    min-height: 100%;
+}
+
+.wrapper-content{
+    overflow: auto;
+    padding-bottom: 180px; /* must be same height as the footer */
+}
+
 .product-item{
 	height: 430px;
 	background-color: white;
@@ -26,3 +39,35 @@ html, body{
 	transform: translateX(-50%);
 }
 
+.footer{
+    position: relative;
+    margin-top: -180px; /* negative value of footer height */
+    height: 180px;
+    clear: both;
+    background-color: white;
+}
+
+.discount-container{
+    position: absolute;
+    top: 30%;
+    background: #55e073;
+    width: 30%;
+    color: white;
+    font-weight: 700;
+    padding: 3px;
+}
+
+.discount-container-hot{
+  background: Maroon;
+}
+
+.section-delivery{
+    height: 300px;
+    background-color: darkseagreen;
+    text-align: center;
+    color: white;
+}
+
+.product-description-tabs{
+    padding: 10px;
+}
