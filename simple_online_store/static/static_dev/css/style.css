@@ -9,6 +9,20 @@ html, body{
     margin-bottom: 0;
 }
 
+.navbar-top{
+    min-height: 10px;
+    height: 20px;
+    background-color: green;
+    border: none;
+    border-radius: 0;
+}
+
+.navbar-main{
+    background-color: #55e073;
+    border: none;
+    border-radius: 0;
+}
+
 .wrapper{
     min-height: 100%;
 }
@@ -69,5 +83,31 @@ html, body{
 }
 
 .product-description-tabs{
+    padding: 10px;
+}
+
+.product-item:hover {
+    border: 2px solid #55e073;
+}
+
+.scrollUp {
+    position: relative;
+    left: 94%;
+    margin-bottom: 10px;
+}
+
+.basket-container{
+    position: relative;
+    width: 250%;
+    padding: 15px 10px;
+    right: 258%;
+}
+
+.basket-items{
+    position: absolute;
+    top: 50px;
+    width: 200%;
+    background-color: #55e093;
+    z-index: 10;
     padding: 10px;
 }

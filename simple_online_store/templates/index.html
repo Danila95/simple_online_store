@@ -77,6 +77,20 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="text-center">
+                        Игровые консоли
+                    </h1>
+                </div>
+                {% for product_image in products_images_game_consoles %}
+                    {% include 'mainApp/product_item.html' %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="section section6 different-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">
                         Разное
                     </h1>
                 </div>
@@ -86,6 +100,7 @@
             </div>
         </div>
     </div>
+    <a href="javascript://0" onclick="slowScroll('#up')" id="toTop"><img  class="scrollUp" src="{% static './img/icon_top.png' %}" alt=""></a>
 {% endblock %}
 
 {% block links %}
@@ -95,4 +110,5 @@
 {% endblock %}
 {% block scripts %}
     <script src="{% static './js/bubbles.js' %}"></script>
+    <script src="{% static './js/scrollUp.js' %}"></script>
 {% endblock %}

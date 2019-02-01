@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" id="up">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -16,6 +16,7 @@
     {% bootstrap_javascript %}
     {% bootstrap_css %}
     <title>{% block title %}{% endblock %}</title>
+    <script src="{% static './js/scripts.js' %}"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -31,5 +32,6 @@
 </body>
     {# includs links and scripts #}
     {% block links %}{% endblock %}
-    {% block scripts %}{% endblock %}
+    {% block scripts %}
+    {% endblock %}
 </html>

@@ -9,6 +9,7 @@ def home(request):
 	products_images_laptops = products_images.filter(product__category__id=2)
 	products_images_headphones = products_images.filter(product__category__id=3)
 	products_images_different = products_images.filter(product__category__id=4)
+	products_images_game_consoles = products_images.filter(product__category__id=5)
 	return render(request, 'index.html', locals())
 
 
