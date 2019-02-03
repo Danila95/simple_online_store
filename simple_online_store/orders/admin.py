@@ -7,7 +7,7 @@ class ProductInOrderInline(admin.TabularInline):
     extra = 0 # убирает дополнительные ряды по загрузке файлов
 
 class OrderAdmin (admin.ModelAdmin):
-	# выведем поля в таблице в моделе Subscriber в админке
+	# выведем поля в таблице в моделе OrderAdmin в админке
 	list_display = [field.name for field in Order._meta.fields]
 	inlines = [ProductInOrderInline]  # вкладываем страницу в OrderAdmin
 
@@ -19,24 +19,34 @@ admin.site.register(Order, OrderAdmin)
 
 
 class StatusAdmin(admin.ModelAdmin):
-	# выведем поля в таблице в моделе Subscriber в админке
+	# выведем поля в таблице в моделе Status в админке
 	list_display = [field.name for field in Status._meta.fields]
 
 	class Meta:
 		model = Status
 
 
-# регистрируем модель Order, которую мы импорттировали из models.py и рег. класс OrderAdmin
+# регистрируем модель Status, которую мы импорттировали из models.py и рег. класс OrderAdmin
 admin.site.register(Status, StatusAdmin)
 
 
 class ProductInOrderAdmin(admin.ModelAdmin):
-	# выведем поля в таблице в моделе Subscriber в админке
+	# выведем поля в таблице в моделе ProductInOrder в админке
 	list_display = [field.name for field in ProductInOrder._meta.fields]
 
 	class Meta:
 		model = ProductInOrder
 
-
 # регистрируем модель ProductInOrder, которую мы импорттировали из models.py и рег. класс ProductInOrderAdmin
 admin.site.register(ProductInOrder, ProductInOrderAdmin)
+
+class ProductInBasketAdmin(admin.ModelAdmin):
+	# выведем поля в таблице в моделе Subscriber в админке
+	list_display = [field.name for field in ProductInBasket._meta.fields]
+
+	class Meta:
+		model = ProductInBasket
+
+# регистрируем модель ProductInBasket, которую мы импорттировали из models.py и рег. класс ProductInOrderAdmin
+admin.site.register(ProductInBasket, ProductInBasketAdmin)
+
