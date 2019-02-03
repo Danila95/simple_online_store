@@ -2,5 +2,5 @@ from django.urls import include, path
 from . import views
 
 urlpatterns = [
-	# path('', views.mainApp, name='index'),
+	path('basket_adding/', views.basket_adding, name='basket_adding'),
 ]
