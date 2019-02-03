@@ -100,6 +100,3 @@ class ProductInBasket(models.Model):
 		self.total_price = int(self.nmb) * price_per_item
 
 		super(ProductInBasket, self).save(*args, **kwargs)
-
-class Test(models.Model):
-	session = models.CharField(max_length=128, blank=True, null=True, default=None)
