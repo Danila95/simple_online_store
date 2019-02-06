@@ -111,3 +111,7 @@ html, body{
     z-index: 10;
     padding: 10px;
 }
+
+.delete-item:hover {
+    cursor: pointer;
+}

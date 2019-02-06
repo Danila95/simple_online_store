@@ -45,6 +45,7 @@
                         <ul class="">
                             {% for product_in_basket in products_in_basket %}
                                 <li>{{ product_in_basket.product.name }}, {{ product_in_basket.nmb }} шт. по {{ product_in_basket.price_per_item }}
+                                    <a class="delete-item" data-product_id="{{ product_in_basket.id }}">X</a>
                                     <p>Всего:  {{ product_in_basket.total_price }} {{ product_in_basket.product.currency }}</p></li>
                             {% endfor %}
                         </ul>
