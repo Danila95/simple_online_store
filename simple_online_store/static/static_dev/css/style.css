@@ -115,3 +115,6 @@ html, body{
 .delete-item:hover {
     cursor: pointer;
 }
+.form-error{
+    color: red;
+}
